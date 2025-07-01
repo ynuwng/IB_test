@@ -14,7 +14,7 @@ class VolumeMomentumStrategy(bt.Strategy):
         mid_ma=10,
         tp_pct=0.05,
         sl_pct=0.03,
-        risk_pct= 0.5  # 每笔使用 10% 仓位
+        risk_pct= 0.8  # 每笔使用 10% 仓位
     )
 
     def __init__(self):
