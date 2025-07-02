@@ -6,15 +6,15 @@ import numpy as np
 ib = IB()
 ib.connect('127.0.0.1', 7497, clientId=1)
 
-# === 合约定义（AAPL 股票）===
-contract = Stock('HOOD', 'SMART', 'USD')
+# === 合约定义 ===
+contract = Stock('BMNR', 'SMART', 'USD')
 ib.qualifyContracts(contract)
 
 # === 获取历史数据（最近5天 × 1分钟K线 × 常规交易时间）===
 bars = ib.reqHistoricalData(
     contract,
     endDateTime='',
-    durationStr='1 D',
+    durationStr='2 D',
     barSizeSetting='1 min',
     whatToShow='TRADES',
     useRTH=True,               # ✅ 只要常规交易时间内数据（9:30–16:00）
